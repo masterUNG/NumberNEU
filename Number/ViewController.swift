@@ -9,6 +9,30 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //Implicit
+    var intNumber = 1
+    
+    @IBOutlet weak var numberLabel: UILabel!
+    
+    @IBAction func decNumber(sender: AnyObject) {
+        intNumber -= 1
+        showNumber(intNumber)
+    }
+    
+    
+    @IBAction func incNumber(sender: AnyObject) {
+        intNumber += 1
+        showNumber(intNumber)
+    }
+  
+    //Show Number
+    func showNumber(arg1:Int)->Void{
+    
+        numberLabel.text = String(arg1)
+    
+    }   // showNumber
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,5 +45,5 @@ class ViewController: UIViewController {
     }
 
 
-}
+}   // Main Class
 
